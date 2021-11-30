@@ -9,10 +9,10 @@ function preload() {
     backg = loadImage("Imagenes/garden.png");
     tomImg1= loadAnimation("Imagenes/tomOne.png");
     tomImg2=loadAnimation("Imagenes/tomTwo.png","Imagenes/tomThree.png");
-    TomImg3= loadAnimation("Imagenes/tomFour.png");
+    tomImg4= loadAnimation("Imagenes/tomFour.png");
     jerryImg1=loadAnimation("Imagenes/jerryOne.png");
     jerryImg2= loadAnimation("Imagenes/jerryTwo.png","Imagenes/jerryThree.png");
-    jerryImg3=loadAnimation("Imagenes/jerryFour.png");
+    jerryImg4=loadAnimation("Imagenes/jerryFour.png");
 
 }
 
@@ -31,18 +31,18 @@ function setup(){
 
 function draw() {
 
-    background(bg);
+    background(backg);
 
     if(tom.x - jerry.x < (tom.width - jerry.width)/2)
     { 
         tom.velocityX=0
-        tom.addAnimation("ÚltimaImagenGato"),tomImg4;
-        tom.changeAnimation("ÚltimaImagenGato");
+        tom.addAnimation("ÚltimaImagenGato"),tomImg1;
+        tom.changeAnimation("ÚltimaImagenGato"), tomImg4;
         tom.x=300;
         tom.scale=0.2;    
         
-        jerry.addAnimation("ÚltimaImagenRatón"),jerryImg4;
-        jerry.changeAnimation("ÚltimaImagenRatón"), jerryImg1;
+        jerry.addAnimation("ÚltimaImagenRatón"),jerryImg1;
+        jerry.changeAnimation("ÚltimaImagenRatón"), jerryImg4;
         jerry.x=300;
         jerry.scale=0.2;  
     }  
